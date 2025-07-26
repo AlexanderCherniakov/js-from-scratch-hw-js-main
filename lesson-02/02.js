@@ -7,9 +7,17 @@
 * Для успешного прохождения тестов не меняйте названия переменных!
 */
 
-let dice1 // your code
-let dice2 // your code
-let isWinningDouble // your code
+// Генерация случайных значений для первого и второго кубика
+let dice1 = Math.floor(Math.random() * 6) + 1; // Случайное целое число от 1 до 6 // your code
+let dice2 = Math.floor(Math.random() * 6) + 1; // То же самое // your code
+
+// Проверка, являются ли числа равными (дубликат), и каждое из них больше 3
+let isWinningDouble = (dice1 === dice2) && (dice1 > 3); // your code
+
+// Вывод результатов броска и результата проверки
+console.log(dice1);
+console.log(dice2);
+console.log(isWinningDouble);
 
 /*
 console.log('Первый бросок: ' + dice1)
