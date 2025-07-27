@@ -12,4 +12,23 @@
 Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
 */
 
-function doubleEachCharacter() {}
+/**
+ * Удваивает каждый символ в строке.
+ *
+ * @param {string} str - Исходная строка.
+ * @return {string} Новая строка с удвоенными символами.
+ */
+function doubleEachCharacter(str) {
+    let doubledString = '';
+    
+    // Проходим по каждому символу исходной строки
+    for (let char of str) {
+        // Добавляем символ дважды в результирующую строку
+        doubledString += char + char;
+    }
+    
+    return doubledString;
+}
+
+// Пример использования:
+console.log(doubleEachCharacter('hello')); // Результат: hheelllloo

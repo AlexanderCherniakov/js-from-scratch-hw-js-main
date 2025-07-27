@@ -15,4 +15,17 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements() {}
+/**
+ * Возвращает массив уникальных элементов из входящего массива.
+ *
+ * @param {Array} array - Исходный массив с возможными дубликатами.
+ * @returns {Array} Новый массив, содержащий только уникальные элементы.
+ */
+function findUniqueElements(array) {
+    const uniqueSet = new Set(array); // Создаем набор уникальных значений
+    return Array.from(uniqueSet);     // Преобразуем обратно в массив
+}
+
+// Пример использования:
+const result = findUniqueElements([1, 2, 3, 2, 1, 4]);
+console.log(result); // Выведет: [1, 2, 3, 4]

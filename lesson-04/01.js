@@ -13,4 +13,21 @@
 includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
-function includesElement() {}
+/**
+ * Проверяет, присутствует ли указанный элемент в переданном массиве.
+ *
+ * @param {Array} array - Массив для проверки наличия элемента.
+ * @param {*} element - Элемент, присутствие которого проверяется.
+ * @return {boolean} true, если элемент присутствует в массиве, иначе false.
+ */
+function includesElement(array, element) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === element) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Пример использования:
+console.log(includesElement([1, 2, 3], 2)); // Должен вывести 'true'
