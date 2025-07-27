@@ -27,7 +27,7 @@ class Game {
         // Проверяем существование указанного типа ресурса
         if (!this.resources.hasOwnProperty(resource)) {
             console.error("Invalid resource");
-            return;
+            return error;
         }
         
         // Добавляем указанное количество ресурса
