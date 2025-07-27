@@ -24,4 +24,23 @@ const doubledNumbers = map(numbers, (element, index) => {
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
 
-const map = () => {}
+// Собственная реализация функции map()
+function map(array, callback) {
+    const result = []; // Новый массив для сохранения результатов
+    
+    for (let i = 0; i < array.length; i++) {
+        // Применяем колбэк-функцию к каждому элементу и индексу,
+        // результат добавляем в новый массив
+        result.push(callback(array[i], i));
+    }
+    
+    return result;
+}
+
+// Пример использования нашей функции map():
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = map(numbers, (element, index) => {
+    return element * 2; // Умножение каждого элемента на 2
+});
+
+console.log(doubledNumbers); // Выводит: [2, 4, 6, 8, 10]

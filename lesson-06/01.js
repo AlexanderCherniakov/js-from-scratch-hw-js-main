@@ -23,4 +23,23 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-const filter = () => {}
+// Реализация собственной функции filter
+function filter(array, callback) {
+    const result = [];
+    
+    for(let i = 0; i < array.length; i++) {
+        if(callback(array[i], i)) { // Проверка условия путем вызова callback-функции
+            result.push(array[i]); // Добавляем элемент в результат, если условие выполнено
+        }
+    }
+    
+    return result;
+}
+
+// Пример использования:
+const numbers = [1, 2, 3, 4, 5];
+const oddNumbers = filter(numbers, (element, index) => {
+    return element % 2 !== 0; // Условие проверки на нечётность числа
+});
+
+console.log(oddNumbers); // Результат: [1, 3, 5]
