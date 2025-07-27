@@ -29,10 +29,30 @@ console.log(gallery)
 }
 */
 
+// const gallery = {
+//   'Mona Lisa': 'Leonardo da Vinci',
+//   'Starry Night': 'Vincent van Gogh',
+//   'The Scream': 'Edvard Munch',
+// }
+
+// Определяем функцию updateGallery
+function updateGallery(gallery, title, value) {
+    // Обновляем существующее произведение или создаем новое
+    gallery[title] = value;
+}
+
+// Пример использования функции
 const gallery = {
   'Mona Lisa': 'Leonardo da Vinci',
   'Starry Night': 'Vincent van Gogh',
-  'The Scream': 'Edvard Munch',
-}
+  'The Scream': 'Edvard Munch'
+};
 
-function updateGallery() {}
+// Обновляем информацию о Mona Lisa
+updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506');
+
+// Добавляем новое произведение The Persistence of Memory
+updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dalí');
+
+// Печать результатов
+console.log(gallery);
