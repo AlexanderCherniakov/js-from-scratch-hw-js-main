@@ -47,3 +47,4 @@ console.log(game.resources.gold);   // Выведет: 150
 
 // Некорректный ресурс
 game.addResource('iron', 20);      // Выведет ошибку: Invalid resource
+console.log(game.resources.iron);
