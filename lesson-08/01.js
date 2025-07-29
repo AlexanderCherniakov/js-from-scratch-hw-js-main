@@ -6,4 +6,22 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-function capitalizeWords() {}
+// Функция, преобразующая первую букву слова в верхний регистр
+const toUpperCaseFirstLetter = word => {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+};
+
+// Основная функция, обрабатывающая всю строку
+const capitalizeWords = str => {
+  // Разбиваем строку на массив слов
+  const wordsArray = str.split(' ');
+
+  // Применяем преобразование к каждому слову массива
+  const capitalizedWords = wordsArray.map(toUpperCaseFirstLetter);
+
+  // Объединяем обратно в строку
+  return capitalizedWords.join(' ');
+};
+
+// Пример использования функции
+console.log(capitalizeWords("hello world from javascript")); // Hello World From JavaScript

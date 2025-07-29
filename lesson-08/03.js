@@ -10,5 +10,12 @@
 */
 
 function truncate(str, maxLength) {
-  // your code
+  if (str.length > maxLength) {
+    return str.substring(0, maxLength) + "...";
+  }
+  return str;
 }
+
+// Примеры использования:
+console.log(truncate("Вот, что мне действительно нравится в этом", 20)); // "Вот, что мне действи..."
+console.log(truncate("Короткая строка", 20)); // "Короткая строка"
